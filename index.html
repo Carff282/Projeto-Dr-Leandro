@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr. Leandro Alencar — Oftalmologista especializado em Glaucoma, Retina e Vítreo. Retinografia Digital. MedCenter Açailândia — MA." />
+  <title>Dr. Leandro Alencar | Oftalmologista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Dr. Leandro Alencar | Oftalmologista" />
+  <meta property="og:description" content="Oftalmologista especializado em Glaucoma, Retina e Vítreo. Retinografia Digital. MedCenter Açailândia — MA." />
+  <meta property="og:image" content="./assets/dr-leandro.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.seusite.com.br/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr. Leandro Alencar | Oftalmologista" />
+  <meta name="twitter:description" content="Oftalmologista especializado em Glaucoma, Retina e Vítreo. Retinografia Digital. MedCenter Açailândia — MA." />
+  <meta name="twitter:image" content="./assets/dr-leandro.jpg" />
+</head>
+<body>
+
+  <!-- =====================
+       CURSOR PERSONALIZADO
+  ====================== -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- =====================
+       LOADER
+  ====================== -->
+  <!-- Loader acessível -->
+  <div class="loader" id="loader" aria-hidden="true" aria-live="polite">
+    <div class="loader__ring">
+      <svg viewBox="0 0 80 80">
+        <circle cx="40" cy="40" r="34" />
+      </svg>
+    </div>
+    <p class="loader__text">Dr. Leandro Alencar</p>
+  </div>
+
+  <!-- =====================
+       BOTÃO FLUTUANTE WPP
+  ====================== -->
+  <a href="https://wa.me/5599991160983?text=Olá%20Dr.%20Leandro!%20Gostaria%20de%20agendar%20uma%20consulta."
+     class="fab-wpp" target="_blank" rel="noopener noreferrer"
+     aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.12 1.523 5.856L.057 23.786a.5.5 0 0 0 .613.635l6.097-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.37l-.358-.213-3.718.974.99-3.62-.233-.374A9.8 9.8 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+  </a>
+
+  <!-- =====================
+       NAVBAR
+  ====================== -->
+  <header class="nav" id="nav">
+    <div class="nav__wrap">
+      <a href="#hero" class="nav__brand" aria-label="Início">
+        <span class="nav__brand-initials">LA</span>
+        <div class="nav__brand-info">
+          <strong>Dr. Leandro Alencar</strong>
+          <em>Oftalmologista</em>
+        </div>
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="nav__list" id="navList">
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#especialidades" class="nav__link">Especialidades</a></li>
+          <li><a href="#exames" class="nav__link">Exames</a></li>
+          <li><a href="#horarios" class="nav__link">Horários</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li>
+            <a href="https://wa.me/5599991160983" class="nav__cta"
+               target="_blank" rel="noopener noreferrer">
+              Agendar Consulta
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav__hamburger" id="hamburger"
+              aria-label="Abrir menu" aria-expanded="false"
+              aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =====================
+       HERO
+  ====================== -->
+  <section class="hero" id="hero">
+    <!-- Linha decorativa lateral -->
+    <div class="hero__line" aria-hidden="true"></div>
+
+    <div class="hero__wrap">
+      <!-- Coluna texto -->
+      <div class="hero__content">
+        <p class="hero__overtitle">Oftalmologia · MedCenter · Açailândia — MA</p>
+        <h1 class="hero__title">
+          Sua visão<br />
+          <span>merece o melhor</span><br />
+          cuidado.
+        </h1>
+        <p class="hero__lead">
+          Dr. Leandro Alencar oferece diagnóstico preciso em Glaucoma,
+          Retina e Vítreo com Retinografia Digital — tecnologia que
+          visualiza com clareza o nervo óptico e a mácula.
+        </p>
+        <div class="hero__actions">
+          <a href="https://wa.me/5599991160983?text=Olá%20Dr.%20Leandro!%20Gostaria%20de%20agendar%20uma%20consulta."
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#sobre" class="btn-ghost">Conheça o Dr. Leandro</a>
+        </div>
+        <!-- Indicadores numéricos -->
+        <div class="hero__kpis">
+          <div class="kpi">
+            <strong class="kpi__num" data-target="6">0</strong>
+            <span>Dias / semana</span>
+          </div>
+          <div class="kpi__divider" aria-hidden="true"></div>
+          <div class="kpi">
+            <strong class="kpi__num" data-target="400" data-prefix="R$">0</strong>
+            <span>Consulta</span>
+          </div>
+          <div class="kpi__divider" aria-hidden="true"></div>
+          <div class="kpi">
+            <strong class="kpi__num" data-target="2" data-suffix="x">0</strong>
+            <span>Sem juros</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna imagem -->
+      <div class="hero__media">
+        <div class="hero__img-container">
+          <!-- Imagens com lazy loading -->
+          <img src="./assets/dr-leandro.jpg" alt="Dr. Leandro Alencar, Oftalmologista" loading="lazy" />
+          <!-- Etiqueta flutuante -->
+          <div class="hero__tag" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            Retinografia Digital
+          </div>
+        </div>
+        <!-- Tags de especialidade -->
+        <div class="hero__chips">
+          <span class="chip chip--gold">Glaucoma</span>
+          <span class="chip">Retina e Vítreo</span>
+          <span class="chip chip--gold">Retinografia</span>
+          <span class="chip">Clínica Geral</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Role para baixo</span>
+      <div class="hero__scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- =====================
+       SOBRE
+  ====================== -->
+  <section class="section" id="sobre">
+    <div class="wrapper">
+      <div class="about">
+        <div class="about__img-wrap" data-reveal>
+          <!-- Imagens com lazy loading -->
+          <img src="./assets/dr-leandro-2.jpg" alt="Dr. Leandro Alencar em consulta" loading="lazy" />
+          <div class="about__badge">CRM-MA Ativo</div>
+        </div>
+        <div class="about__text" data-reveal data-delay="100">
+          <p class="label">Sobre o especialista</p>
+          <h2 class="heading">
+            Cuidado com a sua<br />
+            <em>visão e saúde ocular</em>
+          </h2>
+          <p class="body-text">
+            Dr. Leandro Alencar é médico oftalmologista com especialização em
+            Glaucoma, Retina e Vítreo. Atua na clínica MedCenter em Açailândia,
+            trazendo diagnósticos precisos e tratamentos modernos para proteger
+            e recuperar a visão dos seus pacientes.
+          </p>
+          <p class="body-text" style="margin-top:1rem">
+            Com tecnologia de Retinografia Digital de última geração, realiza a
+            visualização completa do fundo do olho — incluindo nervo óptico
+            e mácula — garantindo avaliações mais seguras e completas.
+          </p>
+          <ul class="check-list">
+            <li>Especialista em Glaucoma, Retina e Vítreo</li>
+            <li>Retinografia Digital para avaliação do fundo do olho</li>
+            <li>Atendimento humanizado e personalizado</li>
+            <li>Clínica MedCenter — referência em Açailândia</li>
+          </ul>
+          <a href="https://wa.me/5599991160983"
+             class="btn-primary" target="_blank" rel="noopener noreferrer"
+             style="margin-top:1.8rem;display:inline-flex">
+            Agendar Consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       ESPECIALIDADES
+  ====================== -->
+  <section class="section section--navy" id="especialidades">
+    <div class="wrapper">
+      <div class="sec-head" data-reveal>
+        <p class="label label--light">O que tratamos</p>
+        <h2 class="heading heading--light">
+          Especialidades e <em>condições atendidas</em>
+        </h2>
+        <p class="body-text body-text--light">
+          Diagnóstico e tratamento das principais doenças oculares
+          com tecnologia moderna e abordagem humanizada.
+        </p>
+      </div>
+      <div class="cards-grid">
+
+        <article class="spec-card" data-reveal>
+          <div class="spec-card__num">01</div>
+          <h3 class="spec-card__title">Glaucoma</h3>
+          <p class="spec-card__desc">
+            Doença silenciosa que pode causar perda irreversível da visão.
+            Diagnóstico precoce com tecnologia de imagem avançada.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+        <article class="spec-card" data-reveal data-delay="80">
+          <div class="spec-card__num">02</div>
+          <h3 class="spec-card__title">Retina e Vítreo</h3>
+          <p class="spec-card__desc">
+            Tratamento de descolamento de retina, degeneração macular,
+            retinopatia diabética e alterações vítreas.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+        <article class="spec-card" data-reveal data-delay="160">
+          <div class="spec-card__num">03</div>
+          <h3 class="spec-card__title">Retinografia Digital</h3>
+          <p class="spec-card__desc">
+            Exame de imagem que registra com alta precisão o fundo do olho,
+            incluindo nervo óptico e mácula.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+        <article class="spec-card" data-reveal data-delay="240">
+          <div class="spec-card__num">04</div>
+          <h3 class="spec-card__title">Consulta Clínica</h3>
+          <p class="spec-card__desc">
+            Avaliação oftalmológica completa para todas as idades,
+            incluindo prescrição de óculos e lentes de contato.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+        <article class="spec-card" data-reveal data-delay="320">
+          <div class="spec-card__num">05</div>
+          <h3 class="spec-card__title">Catarata</h3>
+          <p class="spec-card__desc">
+            Diagnóstico e acompanhamento de catarata com indicação
+            cirúrgica precisa no momento adequado.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+        <article class="spec-card" data-reveal data-delay="400">
+          <div class="spec-card__num">06</div>
+          <h3 class="spec-card__title">Check-up Preventivo</h3>
+          <p class="spec-card__desc">
+            Exames preventivos anuais para detectar precocemente
+            qualquer alteração ocular, mesmo sem sintomas.
+          </p>
+          <div class="spec-card__line"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       EXAME RETINOGRAFIA
+  ====================== -->
+  <section class="section" id="exames">
+    <div class="wrapper">
+      <div class="retino">
+        <div class="retino__text" data-reveal>
+          <p class="label">Tecnologia disponível</p>
+          <h2 class="heading">
+            Retinografia Digital<br />
+            <em>visão completa do fundo do olho</em>
+          </h2>
+          <p class="body-text">
+            A Retinografia Digital permite ao Dr. Leandro capturar imagens
+            de alta resolução do fundo ocular, visualizando com precisão
+            o nervo óptico e a mácula — estruturas fundamentais para a
+            saúde visual.
+          </p>
+          <ul class="check-list" style="margin-top:1.2rem">
+            <li>Detecção precoce de glaucoma</li>
+            <li>Avaliação da mácula e retina</li>
+            <li>Acompanhamento de doenças sistêmicas</li>
+            <li>Registro em imagem para comparação evolutiva</li>
+          </ul>
+          <a href="https://wa.me/5599991160983?text=Quero%20agendar%20uma%20retinografia."
+             class="btn-primary" target="_blank" rel="noopener noreferrer"
+             style="margin-top:1.8rem;display:inline-flex">
+            Agendar Exame
+          </a>
+        </div>
+        <div class="retino__visual" data-reveal data-delay="120">
+          <div class="retino__card">
+            <div class="retino__card-icon">🔬</div>
+            <h3>Retinografia Digital</h3>
+            <p>Visualização precisa de nervo e mácula</p>
+            <div class="retino__tags">
+              <span>Nervo Óptico</span>
+              <span>Mácula</span>
+              <span>Alta Resolução</span>
+            </div>
+          </div>
+          <div class="retino__bg-circle" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       HORÁRIOS
+  ====================== -->
+  <section class="section section--soft" id="horarios">
+    <div class="wrapper">
+      <div class="sec-head" data-reveal>
+        <p class="label">Quando atendemos</p>
+        <h2 class="heading">Horários de <em>atendimento</em></h2>
+        <p class="body-text">
+          Atendimento por ordem de chegada — sem necessidade de agendamento prévio.
+        </p>
+      </div>
+      <div class="schedule" data-reveal data-delay="80">
+        <div class="schedule__card schedule__card--highlight">
+          <div class="schedule__icon">🗓</div>
+          <h3>Segunda a Sexta</h3>
+          <p class="schedule__time">A partir das <strong>14h00</strong></p>
+          <p class="schedule__note">Ordem de chegada</p>
+        </div>
+        <div class="schedule__card">
+          <div class="schedule__icon">📅</div>
+          <h3>Sábado</h3>
+          <p class="schedule__time">A partir das <strong>08h00</strong></p>
+          <p class="schedule__note">Ordem de chegada</p>
+        </div>
+        <div class="schedule__card">
+          <div class="schedule__icon">💳</div>
+          <h3>Valor da Consulta</h3>
+          <p class="schedule__time"><strong>R$ 400,00</strong></p>
+          <p class="schedule__note">Ou 2× sem juros no cartão</p>
+        </div>
+      </div>
+      <div class="schedule__cta" data-reveal>
+        <p>Dúvidas sobre o atendimento? Fale pelo WhatsApp.</p>
+        <a href="https://wa.me/5599991160983"
+           class="btn-primary" target="_blank" rel="noopener noreferrer">
+          Falar com a Clínica
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FAQ
+  ====================== -->
+  <section class="section" id="faq">
+    <div class="wrapper wrapper--narrow">
+      <div class="sec-head" data-reveal>
+        <p class="label">Dúvidas frequentes</p>
+        <h2 class="heading">Perguntas <em>e respostas</em></h2>
+      </div>
+      <div class="faq" data-reveal data-delay="80">
+
+        <div class="faq__item" data-faq>
+          <button class="faq__btn" aria-expanded="false">
+            Preciso de encaminhamento para consultar?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__body">
+            <div class="faq__inner">
+              Não. O atendimento é por ordem de chegada e qualquer pessoa pode
+              consultar diretamente, sem necessidade de encaminhamento médico.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq>
+          <button class="faq__btn" aria-expanded="false">
+            Qual o valor da consulta e formas de pagamento?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__body">
+            <div class="faq__inner">
+              O valor da consulta é R$ 400,00, podendo ser parcelado em
+              até 2× sem juros no cartão. Consulte outras formas de pagamento
+              diretamente na clínica.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq>
+          <button class="faq__btn" aria-expanded="false">
+            O que é a Retinografia Digital?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__body">
+            <div class="faq__inner">
+              É um exame de imagem que registra com alta resolução o fundo do olho,
+              permitindo a visualização do nervo óptico e da mácula para diagnóstico
+              de glaucoma, degeneração macular e outras condições.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq>
+          <button class="faq__btn" aria-expanded="false">
+            Quais são os horários de atendimento?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__body">
+            <div class="faq__inner">
+              De segunda a sexta a partir das 14h, e aos sábados a partir das 8h,
+              ambos por ordem de chegada na MedCenter em Açailândia — MA.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq>
+          <button class="faq__btn" aria-expanded="false">
+            O atendimento é por convênio ou particular?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__body">
+            <div class="faq__inner">
+              O atendimento é particular. Entre em contato pelo WhatsApp para
+              obter mais informações sobre formas de pagamento aceitas.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CTA FINAL
+  ====================== -->
+  <section class="section section--navy cta-final" id="contato">
+    <div class="wrapper">
+      <div class="cta-final__inner" data-reveal>
+        <p class="label label--light">Dê o primeiro passo</p>
+        <h2 class="heading heading--light">
+          Agende sua consulta<br />
+          <em>ainda hoje</em>
+        </h2>
+        <p class="body-text body-text--light">
+          Sua visão é insubstituível. Não espere os sintomas aparecerem —
+          a prevenção é o melhor tratamento.
+        </p>
+        <a href="https://wa.me/5599991160983?text=Olá%20Dr.%20Leandro!%20Gostaria%20de%20agendar%20uma%20consulta."
+           class="btn-primary btn-primary--gold"
+           target="_blank" rel="noopener noreferrer">
+          Agendar pelo WhatsApp
+        </a>
+        <p class="cta-final__info">
+          📍 MedCenter · Açailândia — MA &nbsp;|&nbsp;
+          🕐 Seg–Sex: 14h · Sáb: 8h
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <footer class="footer">
+    <div class="wrapper footer__inner">
+      <div class="footer__brand">
+        <span class="footer__initials">LA</span>
+        <span class="footer__name">Dr. Leandro Alencar</span>
+      </div>
+      <p class="footer__copy">
+        © 2026 · Oftalmologista · CRM-MA · MedCenter Açailândia
+      </p>
+      <div class="footer__links">
+        <a href="https://www.instagram.com/medcenteracailandia/"
+           target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/5599991160983"
+           target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button class="top-btn" id="topBtn" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
